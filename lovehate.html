@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .hidden {
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+    <button onclick=loveHate()>Love Me?</button>
+    <p class="hidden love">Love</p>
+    <p class="hidden hate">Hate</p>
+
+
+    <script>
+        
+        let ind = 0;
+        function loveHate(){
+
+
+
+        if(ind === 1) {
+            document.querySelector(".love").classList.add("hidden") 
+            document.querySelector(".hate").classList.remove("hidden")
+            ind = 0
+            
+
+    }
+        
+        else{
+
+            document.querySelector(".love").classList.remove("hidden") 
+            document.querySelector(".hate").classList.add("hidden")
+            ind = 1
+        }
+    }
+
+
+    </script>
+
+</body>
+</html>

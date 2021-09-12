@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .yes { border: 5px solid blue}
+        .no {border: 5px solid red;}
+
+
+    </style>
+</head>
+<body>
+    <input type="text">
+    <button onclick="checkAvailability()">בדוק זמינות</button>
+    <div id="messeage"> </div>
+
+    <script>
+        let mails = ["jb.haim.rubin@gmail.com", "yossi@gmail.com", "avi@gmail.com"]
+        let messeage =  document.querySelector("#messeage")
+        let inputColor = document.querySelector("input")
+
+
+
+        function checkAvailability() {
+            let inputValue = document.querySelector("input").value
+
+            for(let i=0; i < mails.length; i++) {
+                if(inputValue === mails[i]){
+                messeage.innerText = "כתובת זו כבר קיימת"
+                inputColor.className = "yes"
+
+                return
+                }
+
+                else {
+                    messeage.innerText = "כתובת זו זמינה"
+                    inputColor.className = "no"
+                
+            }
+
+        }
+    }
+
+    </script>
+</body>
+</html>
